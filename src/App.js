@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from 'react'
+import Header from './components/Header'
+import MovieList from './components/MovieList'
+import AddFavorite from './components/AddFavorite'
+import MovieContext from './Context/MovieContext'
+import RemoveFavorite from './components/RemoveFavorite'
+
 
 function App() {
+  const {movies, addToFavorite, favoriteMovies, removeFavoriteMovie} = useContext(MovieContext)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main>
+        <MovieList movies={movies} favoriteComponent={AddFavorite} handleFavoriteClick={addToFavorite} />
+        <h2 style={{margin: '20px', color: 'white'}}>My Favourite Movies</h2>
+        <MovieList movies={favoriteMovies} favoriteComponent={RemoveFavorite} handleFavoriteClick={removeFavoriteMovie} />
+      </main>
     </div>
   );
 }
