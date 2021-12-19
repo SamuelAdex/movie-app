@@ -91,7 +91,7 @@ code {
 }
 .movie-container .img:hover{
   cursor: pointer;
-  transform: scale(1.1)
+  transform: scale(1.1)  
 }
 .movie-container .img:hover .overlay{
   opacity: 1;
@@ -112,4 +112,44 @@ code {
   justify-content: space-between;
   align-items: center;
 }
+.view-link{
+  text-decoration: none;
+  color: whitesmoke;
+  padding:10px;
+  background: rgb(6, 6, 37);
+  margin: 20px;
+  margin-top: 12px;
+  border-radius: 8px;
+}
 /* Movie Item */
+
+
+/* Movie Details */
+.detail-container{
+  color: whitesmoke;
+  margin: 30px;
+}
+.movie-details{
+  margin-top: 30px;
+  display: flex;
+}
+.movie-details img, .movie-details .details{
+  margin: 15px;
+}
+.movie-details .details{
+  line-height: 2rem;
+}
+.detail-container .link{
+  text-decoration: none;
+  color: gray;
+}
+
+/* Movie Details */
+
+
+/* Responsive Media query */
+@media (max-width: 760px){
+  .movie-details{
+    display: block;
+  }
+}

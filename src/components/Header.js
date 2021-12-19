@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import logo from '../logo.png'
 import MovieContext from '../Context/MovieContext'
-
+import {Link} from 'react-router-dom'
 
 const Header = ()=>{
 
@@ -10,7 +10,9 @@ const Header = ()=>{
     return(
         <header className="header">
             <div className="logo">
-                <img src={logo} alt="" />
+                <Link to="/">
+                    <img src={logo} alt="" />
+                </Link>
             </div>
             <div className="search-bar">
                 <input type="text" 

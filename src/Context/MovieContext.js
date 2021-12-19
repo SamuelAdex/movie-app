@@ -30,10 +30,10 @@ export const MovieProvider = ({children})=>{
 
     //Adding items to favorite movies
     const addToFavorite = (movie)=>{
-        const newFavoriteMovie = [...favoriteMovies, movie]
-        setFavoriteMovies(newFavoriteMovie)
+        const newFavoriteMovies = [...favoriteMovies, movie];
+        setFavoriteMovies(newFavoriteMovies)
         
-        saveTolocalStorage(newFavoriteMovie)
+        saveTolocalStorage(newFavoriteMovies)
     }
 
     //Removing items from favorite movies
